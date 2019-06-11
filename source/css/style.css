@@ -310,6 +310,15 @@ a {
     top: -250px;
     right: 270px; } }
 
+.programs {
+  margin-bottom: 30px; }
+  @media (min-width: 768px) {
+    .programs {
+      margin-bottom: 51px; } }
+  @media (min-width: 1300px) {
+    .programs {
+      margin-bottom: 79px; } }
+
 .programs__list {
   margin: 0;
   padding: 0;
@@ -469,5 +478,104 @@ a {
     height: 56px; }
   .programs__description {
     width: 462px; } }
+
+.presentation__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 41px; }
+
+.presentation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.presentation__item {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 32px; }
+  .presentation__item:last-child {
+    margin-bottom: 0; }
+  .presentation__item::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 0;
+    background-color: #68b738;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position: center; }
+  .presentation__item--eco::before {
+    background-image: url("../../img/advantage-leaf@1x.png"); }
+  .presentation__item--water::before {
+    background-image: url("../../img/advantage-powder@1x.png"); }
+  .presentation__item--spoon::before {
+    background-image: url("../../img/advantage-dining@1x.png"); }
+  .presentation__item--clock::before {
+    background-image: url("../../img/advantage-clock@1x.png"); }
+
+.presentation__text {
+  margin: 0; }
+
+@media (min-width: 768px) {
+  .presentation__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .presentation__item {
+    width: 324px;
+    padding-left: 0;
+    padding-top: 119px;
+    margin-bottom: 87px; }
+    .presentation__item::before {
+      width: 80px;
+      height: 80px;
+      top: 0; }
+    .presentation__item::after {
+      position: absolute;
+      top: 50%;
+      left: 124px;
+      z-index: -1;
+      color: #f2f2f2;
+      font-family: "Oswald", sans-serif;
+      font-size: 281px;
+      font-weight: 400;
+      line-height: 0; }
+    .presentation__item--eco::after {
+      content: "1"; }
+    .presentation__item--water::after {
+      content: "2"; }
+    .presentation__item--spoon::after {
+      content: "3"; }
+    .presentation__item--clock::after {
+      content: "4";
+      top: 100px; }
+  .presentation__title {
+    margin-bottom: 60px;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px; }
+  .presentation__text {
+    width: 250px;
+    font-size: 16px;
+    line-height: 24px; } }
+
+@media (min-width: 1300px) {
+  .presentation__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .presentation__item {
+    width: 245px;
+    margin-bottom: 0; }
+  .presentation__text {
+    width: auto; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,142 @@
+.presentation__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 41px;
+}
+
+.presentation__list {
+  @include list-reset();
+}
+
+.presentation__item {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 0;
+
+    background-color: $bg-green;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position: center;
+  }
+
+  &--eco::before {
+    background-image: url("../../img/advantage-leaf@1x.png");
+  }
+
+  &--water::before {
+    background-image: url("../../img/advantage-powder@1x.png");
+  }
+
+  &--spoon::before {
+    background-image: url("../../img/advantage-dining@1x.png");
+  }
+
+  &--clock::before {
+    background-image: url("../../img/advantage-clock@1x.png");
+  }
+}
+
+.presentation__text {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .presentation__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .presentation__item {
+    width: 324px;
+    padding-left: 0;
+    padding-top: 119px;
+    margin-bottom: 87px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: 0;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 124px;
+      z-index: -1;
+
+      color: #f2f2f2;
+      font-family: "Oswald", sans-serif;
+      font-size: 281px;
+      font-weight: 400;
+      line-height: 0;
+    }
+
+    &--eco {
+      &::after {
+        content: "1";
+      }
+    }
+
+    &--water {
+      &::after {
+        content: "2";
+      }
+    }
+
+    &--spoon {
+      &::after {
+        content: "3";
+      }
+    }
+
+    &--clock {
+      &::after {
+        content: "4";
+        top: 100px;
+      }
+    }
+  }
+
+  .presentation__title {
+    margin-bottom: 60px;
+
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+  }
+
+  .presentation__text {
+    width: 250px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .presentation__list {
+    flex-direction: row;
+  }
+
+  .presentation__item {
+    width: 245px;
+    margin-bottom: 0;
+  }
+
+  .presentation__text {
+    width: auto;
+  }
+}
