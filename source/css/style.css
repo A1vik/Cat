@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -72,6 +73,17 @@ a {
   font-style: normal;
   font-display: swap;
   src: local("Oswald Medium"), local("Oswald-Medium"), url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff"); }
+
+.heading {
+  margin: 0;
+  color: #111111;
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px; }
+  @media (min-width: 768px) {
+    .heading {
+      font-size: 60px; } }
 
 .button {
   width: 100%;
@@ -479,6 +491,9 @@ a {
   .programs__description {
     width: 462px; } }
 
+.presentation {
+  margin-bottom: 42px; }
+
 .presentation__title {
   margin: 0;
   padding: 0;
@@ -577,5 +592,122 @@ a {
     margin-bottom: 0; }
   .presentation__text {
     width: auto; } }
+
+.example {
+  padding-top: 15px;
+  padding-bottom: 35px;
+  background-color: #f2f2f2; }
+
+.example__title {
+  margin-bottom: 10px; }
+
+.example__description {
+  margin: 0;
+  margin-bottom: 20px; }
+
+.example__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 38px; }
+
+.example__stats {
+  position: relative;
+  margin: 0;
+  width: 124px;
+  color: #111111;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #cdcdcd; }
+  .example__stats--weight {
+    padding: 17px; }
+  .example__stats--days {
+    padding: 17px; }
+  .example__stats::after {
+    position: absolute;
+    content: "";
+    bottom: -17px;
+    left: 50%;
+    padding-left: 5px;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: lowercase;
+    font-family: "Arial MT", sans-serif;
+    background-color: #f2f2f2;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  .example__stats--weight::after {
+    content: "снижение веса"; }
+  .example__stats--days::after {
+    content: "затрачено времени"; }
+
+.example__costs {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+  text-align: center; }
+
+.example__br-hidden {
+  display: none; }
+
+.example__before,
+.example__after {
+  font-family: "Oswald", sans-serif;
+  line-height: 20px;
+  text-transform: uppercase; }
+
+.example__beforeafter-wrapper {
+  text-align: center; }
+
+.example__range {
+  width: 84px;
+  margin: 0 17px;
+  border-radius: 6px;
+  border: 1px solid #cdcdcd;
+  background-color: #ffffff; }
+
+@media (min-width: 768px) {
+  .example {
+    background-size: 300px; }
+  .example__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .example__title {
+    margin-bottom: 40px; }
+  .example__item {
+    margin-right: 42px; }
+    .example__item:nth-child(2n) {
+      margin-right: 0; }
+  .example__stats {
+    width: 162px;
+    font-size: 30px;
+    line-height: 37.02px; }
+  .example__costs {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right; }
+  .example__br-hidden {
+    display: block; } }
 
 /*# sourceMappingURL=style.css.map */

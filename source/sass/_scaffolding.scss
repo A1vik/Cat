@@ -96,3 +96,17 @@ a {
     url("../fonts/oswaldmedium.woff2") format("woff2"),
     url("../fonts/oswaldmedium.woff") format("woff");
 }
+
+.heading {
+  margin: 0;
+
+  color: $font-color-heading;
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+  }
+}

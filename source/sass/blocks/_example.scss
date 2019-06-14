@@ -1,0 +1,146 @@
+.example {
+  padding-top: 15px;
+  padding-bottom: 35px;
+
+  background-color: $bg-gray;
+}
+
+.example__title {
+  margin-bottom: 10px;
+}
+
+.example__description {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.example__list {
+  @include list-reset();
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 38px;
+}
+
+.example__stats {
+  position: relative;
+  margin: 0;
+  width: 124px;
+
+  color: $font-color-heading;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #cdcdcd;
+
+  &--weight {
+    padding: 17px;
+  }
+
+  &--days {
+    padding: 17px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -17px;
+    left: 50%;
+    padding-left: 5px;
+
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: lowercase;
+    font-family: "Arial MT", sans-serif;
+    background-color: $bg-gray;
+
+    transform: translateX(-50%);
+  }
+
+  &--weight::after {
+    content: "снижение веса";
+  }
+
+  &--days::after {
+    content: "затрачено времени";
+  }
+}
+
+.example__costs {
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $font-color-heading;
+  text-align: center;
+}
+
+.example__br-hidden {
+  display: none;
+}
+
+.example__before,
+.example__after {
+  font-family: "Oswald", sans-serif;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.example__beforeafter-wrapper {
+  text-align: center;
+}
+
+.example__range {
+  width: 84px;
+  margin: 0 17px;
+
+  border-radius: 6px;
+  border: 1px solid #cdcdcd;
+  background-color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    background-size: 300px;
+  }
+
+  .example__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .example__title {
+    margin-bottom: 40px;
+  }
+
+  .example__item {
+    margin-right: 42px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .example__stats {
+    width: 162px;
+
+    font-size: 30px;
+    line-height: 37.02px;
+  }
+
+  .example__costs {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .example__br-hidden {
+    display: block;
+  }
+}
